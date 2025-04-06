@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* 🔥 Full-Screen Container */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* 🎥 Animated Background Video */
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(60%);
+}
+
+/* 🎯 Floating Card with Neon Glow */
+.card {
+    background: rgba(10, 10, 30, 0.8);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    z-index: 1;
+    animation: floatUp 2s ease-in-out infinite alternate;
+}
+
+/* 🖋️ Animated Heading */
+h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    animation: glowText 2s infinite alternate;
+}
+
+/* 🔄 Animated Borders */
+@keyframes glowText {
+    0% { text-shadow: 0px 0px 10px #ff00ff; }
+    100% { text-shadow: 0px 0px 20px #ff00ff; }
+}
+
+/* 🖋️ Input Field */
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+
+
+/* 🚀 Glowing Button with Hover Effect */
+button {
+    width: 50%;
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #ff00ff, #8a2be2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 15px rgba(138, 43, 226, 0.7);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #8a2be2, #ff00ff);
+    box-shadow: 0px 0px 25px rgba(138, 43, 226, 1);
+    transform: scale(1.05);
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    button {
+        width: 60%;
+    }
+}
+
+/* 🏮 Floating Animation */
+@keyframes floatUp {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(25px); }
+}

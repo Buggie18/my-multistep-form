@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.thank-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* 🎥 Animated Background Video */
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* 🏆 Thank You Card */
+.thank-card {
+  background: rgba(20, 20, 20, 0.9); /* Slightly darker for better contrast */
+  border: 2px solid #dc660c; /* Warm orange border */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(252, 130, 0, 0.8); /* Orange glow */
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* ✨ Neon Heading */
+h2 {
+  font-size: 28px;
+  color: #ffcc80; /* Warm orange tone */
+  text-shadow: 0px 0px 12px rgba(249, 156, 57, 0.8); /* Glowing effect */
+  margin-bottom: 15px;
+}
+
+/* 💡 Message Text */
+p {
+  font-size: 18px;
+  color: #fff6e6; /* Soft white-orange */
+  text-shadow: 0px 0px 8px rgba(255, 174, 0, 0.7);
+}
+
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .thank-card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* 🎬 Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
