@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { db } from "../firebase"; // Import Firestore instance
 import { collection, addDoc, serverTimestamp } from "firebase/firestore"; // Firestore functions
 import "../styles/SelectPage.css";
+import posterImage from '/images/Screenshot (1135).png';
 
 const options = [
   { label: "Excited", emoji: "🤩" },
@@ -46,10 +47,10 @@ const SelectPage = () => {
 
   return (
     <div className="select-container">
-      <video autoPlay loop muted className="video-bg">
-        <source src="/video1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <video autoPlay loop muted className="video-bg" poster={posterImage}>
+      <source src="/video1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
       <div className="select-card">
         <select-h2>How are you feeling today?</select-h2>
 

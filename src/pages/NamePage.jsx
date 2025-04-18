@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/NamePage.css";
+import posterImage from '/images/Screenshot (1134).png';
 
 const NamePage = () => {
   const [name, setName] = useState("");
@@ -16,10 +17,10 @@ const NamePage = () => {
   return (
     <div className="container">
       {/* Video Background */}
-      <video autoPlay loop muted className="video-bg">
-        <source src="/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <video autoPlay loop muted className="video-bg" poster={posterImage}>
+  <source src="/video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
       {/* Form Card */}
       <div className="card">

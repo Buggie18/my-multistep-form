@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/FinalPage.css";
+import posterImage from '/images/Screenshot (1137).png';
+
 
 const FinalPage = () => {
   const [paragraph, setParagraph] = useState("");
@@ -14,10 +16,10 @@ const FinalPage = () => {
   return (
     <div className="final-container">
       {/* Video Background */}
-      <video autoPlay loop muted className="video-bg">
-        <source src="/video2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+       <video autoPlay loop muted className="video-bg" poster={posterImage}>
+            <source src="/video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
       <div className="final-card">
         <final-h2>Care to elaborate? We'd love to hear more!</final-h2>
         <form onSubmit={handleSubmit}>
